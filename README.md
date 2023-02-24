@@ -14,6 +14,7 @@
 
 ### Sprint 1
 -> 13/02/2023 Início
+
     1. Dia inicial - Apresentação;
     2. Daily 1 - Apresentação da Squad e início ao Git e Github;
     3. Git/GitHub - Escolha de nome da Squad - Início em Aplicações web;
