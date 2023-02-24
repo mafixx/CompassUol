@@ -23,5 +23,6 @@
     6. Daily com o Mateus - Avanço do curso de Administração + Exercícios;
     7. Finalização do curso de Administração de Sistemas Linux e aprofundamento do curso de Segurança em Aplicações Web;
     8. Conclusão da Sprint 1 e avanço ambiente de Cultura Ágil e Segurança;
+    9. Dia final da Sprint 1 e estudo de Gestão Ágil;
 
 
