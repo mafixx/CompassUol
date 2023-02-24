@@ -1,6 +1,6 @@
-<h1 align="center">
-    <br>Compass Uol
-</h1>
+<p align="center">
+<img width="390" height="53" src="https://compasso.ninja/interno/images/CompassoUOL_Positivo_2021.png">
+</p>
 
 ## ☕ Repositório privado para compartilhamento com os mentores da Compass.
 
@@ -11,5 +11,16 @@
 > 💻 Com a Compass Uol tive a oportunidade de estudar com grandes professores na Udemy, aprendendo inicialmente sobre Git e GitHub. Depois, tendo prática e teoria de Administração de Sistemas GNU/Linux (o que julgo ter sido muito interessante e importante para meu crescimento). Após a finalização da primeira sprint com meus colegas da Squad 2 (Seekers), estou aprendendo dentro do ambiente de Cultura Ágil e Segurança: Segurança em Aplicações Web (que possuo muito interesse) e Gestão Ágil com Scrum, Kanban & Nexus (que apesar de possuir certificado pela Proway, rever é sempre importante). >
 
 --
+
+### Sprint 1
+-> 13/02/2023 Início
+    1. Dia inicial - Apresentação;
+    2. Daily 1 - Apresentação da Squad e início ao Git e Github;
+    3. Git/GitHub - Escolha de nome da Squad - Início em Aplicações web;
+    4. Conclusão Git/GitHub e início em Administração de Sistemas Linux;
+    5. Administração de Sistemas Linux e exercícios;
+    6. Daily com o Mateus - Avanço do curso de Administração + Exercícios;
+    7. Finalização do curso de Administração de Sistemas Linux e aprofundamento do curso de Segurança em Aplicações Web;
+    8. Conclusão da Sprint 1 e avanço ambiente de Cultura Ágil e Segurança;
 
 
