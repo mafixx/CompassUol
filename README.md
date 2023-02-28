@@ -28,6 +28,7 @@
 ### Sprint 2
 -> 27/02/2023 Início
 
-    1. Review da Sprint 1/Planning 2 - Início da Sprint 2;  
+    1. Review da Sprint 1/Planning 2 - Início da Sprint 2;
+    2. Finalização do curso de SQL para Análise de dados - Início do Big Data;  
 
 
