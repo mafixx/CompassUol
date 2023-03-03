@@ -30,6 +30,7 @@
 
     1. Review da Sprint 1/Planning 2 - Início da Sprint 2;
     2. Finalização do curso de SQL para Análise de dados - Início do Big Data;
-    3. Finalização do curso de Gestão Ágil e Começo da Seção 2 do D&A;  
+    3. Finalização do curso de Gestão Ágil e Começo da Seção 2 do D&A;
+    4. Finalização da D&A Script SQL 2.10 e Aula de Big Data;  
 
 
