@@ -32,6 +32,7 @@
     2. Finalização do curso de SQL para Análise de dados - Início do Big Data;
     3. Finalização do curso de Gestão Ágil e Começo da Seção 2 do D&A;
     4. Finalização da D&A Script SQL 2.10 e Aula de Big Data;
-    5. Finalizada Sprint 2 do PB da Compass com ênfase em AWS e Big Data 3.0;
+    5. Finalizado o exercício 2 da Sprint 2;
+    6. Término total da Sprint 2 e do curso de Big Data 3.0;
 
 
