@@ -34,5 +34,6 @@
     4. Finalização da D&A Script SQL 2.10 e Aula de Big Data;
     5. Finalizado o exercício 2 da Sprint 2;
     6. Término total da Sprint 2 e do curso de Big Data 3.0;
+    7. Finalizado o curso de Segurança em Aplicações Web;
 
 
