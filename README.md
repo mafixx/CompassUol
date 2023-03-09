@@ -35,5 +35,6 @@
     5. Finalizado o exercício 2 da Sprint 2;
     6. Término total da Sprint 2 e do curso de Big Data 3.0;
     7. Finalizado o curso de Segurança em Aplicações Web;
+    8. Inciando curso complementar de Python;
 
 
