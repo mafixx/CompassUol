@@ -38,3 +38,8 @@
     8. Inciando curso complementar de Python;
     9. Último dia da Sprint 2 e avanço no curso complementar de Python;
 
+### Sprint 3
+-> 13/03/2023
+
+    1. Review da Sprint 2/Planning 3 - Início da Sprint 3, Exercícios e Curso Python;
+
