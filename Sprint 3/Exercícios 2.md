@@ -53,7 +53,7 @@ for word in list:
         print(f"A palavra: {word} é um palíndromo")
 ~~~
 
-    1. Dada as listas a seguir:
+    9. Dada as listas a seguir:
     primeirosNomes = ['Joao', 'Douglas', 'Lucas', 'José']
     sobreNomes = ['Soares', 'Souza', 'Silveira', 'Pedreira']
     idades = [19, 28, 25, 31]
@@ -79,7 +79,7 @@ lista = ['abc', 'abc', 'abc', '123', 'abc', '123', '123']
 print(sorted(set(lista)))
 ~~~
 
-    1.  Escreva um programa que lê o conteúdo do arquivo texto arquivo_texto.txt e imprime o seu conteúdo.
+    11.  Escreva um programa que lê o conteúdo do arquivo texto arquivo_texto.txt e imprime o seu conteúdo.
     Dica: leia a documentação da função open(...)
 ~~~python
 arquivo = open('arquivo_texto.txt')
@@ -87,7 +87,7 @@ texto = arquivo.read()
 print(texto, end=(""))
 ~~~
 
-    1.  Leia o arquivo person.json, faça o parsing e imprima seu conteúdo.
+    12.  Leia o arquivo person.json, faça o parsing e imprima seu conteúdo.
     Dica: leia a documentação do pacote json
 ~~~python
 import json
