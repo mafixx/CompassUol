@@ -42,4 +42,5 @@
 -> 13/03/2023
 
     1. Review da Sprint 2/Planning 3 - Início da Sprint 3, Exercícios e Curso Python;
+    2. Segundo dia de exercícios da Sprint 3;
 
