@@ -124,7 +124,7 @@ print(nova_lista)
     Desligue a Lampada
     Imprima: A lâmpada ainda está ligada? False
 ~~~python
-    class Lampada:
+class Lampada:
     def __init__(self, ligada):
         self.ligada = ligada
         
@@ -141,8 +141,7 @@ lampada = Lampada(True)
 lampada.liga()
 print("A lâmpada está ligada?", lampada.esta_ligada())
 lampada.desliga()
-print("A lâmpada ainda está ligada?", 				   
-lampada.esta_ligada())
+print("A lâmpada ainda está ligada?", lampada.esta_ligada())
 ~~~
 
     16. Escreva uma função que recebe uma string de números separados por vírgula e retorne a soma de todos eles. Depois imprima a soma dos valores.
