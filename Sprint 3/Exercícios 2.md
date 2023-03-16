@@ -114,7 +114,6 @@ print(nova_lista)
     Teste sua função com os seguintes parâmetros:
     (1, 3, 4, 'hello', parametro_nomeado='alguma coisa', x=20)
 ~~~python
-class MinhaClasse:
     def imprimir_parametros(*args, **kwargs):
         print("Parâmetros não nomeados:")
         for arg in args:
@@ -123,8 +122,7 @@ class MinhaClasse:
         print("Parâmetros nomeados:")
         for key, value in kwargs.items():
             print(key, "=", value)
-obj = MinhaClasse()
-obj.imprimir_parametros(1, 3, 4, 'hello', parametro_nomeado='alguma coisa', x=20)
+imprimir_parametros(1, 3, 4, 'hello', parametro_nomeado='alguma coisa', x=20)
 ~~~
 
     15. Implemente a classe Lampada. A classe Lâmpada recebe um booleano no seu construtor, Truese a lâmpada estiver ligada, False caso esteja desligada. A classe Lampada possuí os seguintes métodos:

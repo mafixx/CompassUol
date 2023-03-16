@@ -94,3 +94,52 @@ calculo = Calculo()
 print(f'Somando: {x}+{y} = {calculo.soma(x,y)}')
 print(f'Subtraindo: {x}+{y} = {calculo.subtracao(x,y)}')
 ~~~
+
+    4. Crie uma classe Ordenadora que contenha um atributo listaBaguncada e que contenha os métodos ordenacaoCrescente e ordenacaoDecrescente.
+    Instancie um objeto chamado crescente dessa classe Ordenadora que tenha como listaBaguncada a lista [3,4,2,1,5] e instancie um outro objeto, decrescente dessa mesma classe com uma outra listaBaguncada sendo [9,7,6,8]. 
+    Para o primeiro objeto citado, use o método ordenacaoCrescente e para o segundo objeto, use o método
+    ordenacaoDecrescente.
+
+Imprima o resultado da ordenação crescente e da ordenação decresce
+
+[1, 2, 3, 4, 5] 
+[9, 8, 7, 6]
+~~~python
+class Ordenadora:
+    def __init__(self, listaBaguncada):
+        self.listaBaguncada = listaBaguncada
+
+    def ordenacaoCrescente(self):
+        return sorted(self.listaBaguncada)
+
+    def ordenacaoDecrescente(self):
+        return sorted(self.listaBaguncada, reverse=True)
+
+crescente = Ordenadora([3, 4, 2, 1, 5])
+decrescente = Ordenadora([9, 7, 6, 8])
+
+print(crescente.ordenacaoCrescente())
+print(decrescente.ordenacaoDecrescente())
+~~~
+
+    5. Crie uma classe Avião que possua os atributos modelo, velocidade_maxima, cor e capacidade.
+    
+    Defina o atributo cor de sua classe , de maneira que todas as instâncias de sua classe avião sejam da cor “azul”.
+    
+    Após isso, a partir de entradas abaixo, instancie e armazene em uma lista 3 objetos da classe Avião.
+    
+    Ao final, itere pela lista imprimindo cada um dos objetos no seguinte formato:
+    
+    “O avião de modelo “x” possui uma velocidade máxima de “y”, capacidade para “z” passageiros e é da cor “w”.
+    Sendo x, y, z e w cada um dos atributos da classe “Avião”.
+    
+    Valores de entrada:
+
+    modelo BOIENG456: velocidade máxima 1500 km/h: capacidade para 400 passageiros: Cor Azul
+
+    modelo Embraer Praetor 600: velocidade máxima 863km/h: capacidade para 14 passageiros: Cor Azul
+
+    modelo Antonov An-2: velocidade máxima de 258 Km/h: capacidade para 12 passageiros: Cor Azul
+~~~python
+
+~~~
