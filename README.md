@@ -44,4 +44,6 @@
     1. Review da Sprint 2/Planning 3 - Início da Sprint 3, Exercícios e Curso Python;
     2. Segundo dia de exercícios da Sprint 3;
     3. Terceiro dia de exercícios da Sprint 3 e conclusão do curso Python;
-    4. Seção 4 faltando ex 14 e iniciada a Seção 6 do D&A e dúvidas sanadas com o mentor
+    4. Seção 4 faltando ex 14 e iniciada a Seção 6 do D&A e dúvidas sanadas com o mentor;
+    5. Quase finalizada a Sprint 3;
+    6. Daily + Questões pendentes para resolução do último ex da Sprint 3;
