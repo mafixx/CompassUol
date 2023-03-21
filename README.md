@@ -47,3 +47,4 @@
     4. Seção 4 faltando ex 14 e iniciada a Seção 6 do D&A e dúvidas sanadas com o mentor;
     5. Quase finalizada a Sprint 3;
     6. Daily + Questões pendentes para resolução do último ex da Sprint 3;
+    7. Final da Sprint 3;
