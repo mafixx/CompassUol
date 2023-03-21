@@ -1,0 +1,51 @@
+Calcula a receita média por ator por filme para todos os atores:
+Anthony Daniels, 451.84
+Orlando Bloom, 165.64
+Emma Watson, 157.76
+Daniel Radcliffe, 154.96
+Will Smith, 131.21
+Andy Serkis, 125.68
+Jeremy Renner, 119.06
+Harrison Ford, 118.82
+Chris Evans, 106.86
+Bradley Cooper, 102.31
+Ian McKellen, 101.63
+Leonardo DiCaprio, 100.73
+Eddie Murphy, 100.27
+Tom Cruise, 99.64
+Idris Elba, 99.25
+Tom Hanks, 98.65
+Anne Hathaway, 96.66
+Jim Carrey, 94.27
+Scarlett Johansson, 90.30
+Jonah Hill, 89.83
+Cameron Diaz, 89.17
+Gary Oldman, 86.68
+Don Cheadle, 84.86
+Adam Sandler, 83.16
+Matt Damon, 79.67
+Helena Bonham Carter, 78.39
+Elizabeth Banks, 77.89
+Ben Stiller, 76.41
+Ralph Fiennes, 75.43
+Johnny Depp, 74.86
+Robert Downey Jr., 74.48
+Stellan Skarsgard, 73.84
+Morgan Freeman, 73.25
+Cate Blanchett, 71.86
+Mark Wahlberg, 70.83
+Sandra Bullock, 70.36
+Samuel L. Jackson, 69.17
+Brad Pitt, 67.02
+Robin Williams, 66.92
+Owen Wilson, 66.73
+Julia Roberts, 65.13
+Stanley Tucci, 62.48
+Philip Seymour Hoffman, 61.59
+Dustin Hoffman, 58.65
+Tommy Lee Jones, 58.29
+Michael Caine, 57.78
+Woody Harrelson, 56.32
+Bruce Willis, 53.16
+Liam Neeson, 46.71
+Robert DeNiro, 39.00

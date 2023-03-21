@@ -1,0 +1,2 @@
+Encontra o ator com maior receita média por filme:
+Anthony Daniels, 451.84
