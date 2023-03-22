@@ -1,7 +1,7 @@
 # Seção 7 Desafio ETL com Python
 
 # Passo 1
-with open('./ETL/actors.csv', 'r') as file:
+with open('actors.csv', 'r') as file:
     # print(columns.replace('"','').strip("'"))
     data = file.read()
 
