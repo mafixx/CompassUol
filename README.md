@@ -49,3 +49,4 @@
     6. Daily + Questões pendentes para resolução do último ex da Sprint 3;
     7. Final da Sprint 3;
     8. Daily + Ajuda da Squad aos membros do grupo no último exercício da Sprint 3;
+    9. Daily + início do Ultimate AWS Certified Cloud Practitioner
