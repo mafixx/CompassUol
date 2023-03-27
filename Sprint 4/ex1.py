@@ -15,7 +15,7 @@
 
 # a soma destes valores.
 
-with open("number.txt") as file:
+with open("./Sprint 4/number.txt") as file:
     numbers = list(map(int, file.readlines()))
     
 pairs = list(filter(lambda y: y % 2 == 0, numbers)) # O certo era o console exibir com o set, já que o list não pega o valor com final 92 e sim, repete o penúltimo
