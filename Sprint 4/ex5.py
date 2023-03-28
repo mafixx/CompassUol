@@ -20,14 +20,17 @@
 # sorted
 
 
-import csv
+import csv, sys, io
 
 # Abre o arquivo CSV
-with open('./Sprint 4/estudantes.csv', newline='') as csvfile:
+with open('./Sprint 4/estudantes.csv', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
 
     # Ordenando por linhas os nomes dos alunos
     rows = sorted(reader, key=lambda row: row[0])
+
+    # Corrige a acentuação
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
     # Notas dos alunos
     for row in rows:
