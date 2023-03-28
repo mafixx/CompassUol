@@ -55,3 +55,4 @@
 -> 27/03/2023
 
     1. Review da Sprint 3/Planning 4 - Início da Sprint 4, início dos cursos em vídeo;
+    2. Finalizado o curso de Estatística e Docker e iniciando os exercícios;

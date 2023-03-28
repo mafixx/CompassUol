@@ -17,3 +17,25 @@
 # max
 # zip
 # map
+
+def calcular_valor_maximo(operadores, operandos):
+    # Dicionário que mapeia cada operador para a sua respectiva operação matemática
+    operacoes = {'+': lambda a, b: a+b,
+                 '-': lambda a, b: a-b,
+                 '*': lambda a, b: a*b,
+                 '/': lambda a, b: a/b,
+                 '%': lambda a, b: a%b}
+    # Aplica as operações aos pares de operandos
+    resultados = []
+    for i in range(len(operadores)):
+        op = operadores[i]
+        opd = operandos[i]
+        operacao = operacoes[op]
+        resultados.append(operacao(opd[0], opd[1]))
+    # Retorna o maior valor dos resultados usando max
+    return max(resultados)
+operadores = ['+','-','*','/','+']
+operandos  = [(3,6), (-7,4.9), (8,-8), (10,2), (8,4)]
+
+resultado = calcular_valor_maximo(operadores, operandos)
+print(resultado)

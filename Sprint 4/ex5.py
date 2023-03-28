@@ -18,3 +18,24 @@
 # round
 # map
 # sorted
+
+
+import csv
+
+# Abre o arquivo CSV
+with open('./Sprint 4/estudantes.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+
+    # Ordenando por linhas os nomes dos alunos
+    rows = sorted(reader, key=lambda row: row[0])
+
+    # Notas dos alunos
+    for row in rows:
+        nome = row[0]
+        notas = list(map(float, row[1:]))
+        # Seleciona as três maiores notas
+        top_notas = sorted(notas, reverse=True)[:3]
+        media = round(sum(top_notas) / 3, 2)
+
+        # Imprime o aluno, as notas e a média
+        print(f"Nome: {nome} Notas: {top_notas} Média: {media:.2f}")
