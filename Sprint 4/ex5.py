@@ -20,25 +20,65 @@
 # sorted
 
 
-import csv, sys, io
+# import csv, sys, io
+
+# # Abre o arquivo CSV
+# with open('./Sprint 4/estudantes.csv', encoding='utf-8') as csvfile:
+#     reader = csv.reader(csvfile)
+
+#     # Ordenando por linhas os nomes dos alunos
+#     rows = sorted(reader, key=lambda row: row[0])
+
+#     # Corrige a acentuação
+#     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+#     # Notas dos alunos
+#     for row in rows:
+#         nome = row[0]
+#         notas = list(map(float, row[1:]))
+#         # Seleciona as três maiores notas
+#         top_notas = sorted(notas, reverse=True)[:3]
+#         media = round(sum(top_notas) / 3, 2)
+
+#         # Imprime o aluno, as notas e a média
+#         print(f"Nome: {nome} Notas: {top_notas} Média: {media:.2f}")
 
 # Abre o arquivo CSV
-with open('./Sprint 4/estudantes.csv', encoding='utf-8') as csvfile:
-    reader = csv.reader(csvfile)
+# csvfile = open('./Sprint 4/estudantes.csv', encoding='utf-8')
+# reader = csvfile.readlines()
 
-    # Ordenando por linhas os nomes dos alunos
-    rows = sorted(reader, key=lambda row: row[0])
+# # Ordenando por linhas os nomes dos alunos
+# rows = sorted(reader, key=lambda row: row.split(",")[0])
 
-    # Corrige a acentuação
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+# # Corrige a acentuação
+# # sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-    # Notas dos alunos
+# # Notas dos alunos
+# for row in rows:
+#     row = row.strip()
+#     nome = row.split(",")[0]
+#     notas = list(map(float, row.split(",")[1:]))
+#     # Seleciona as três maiores notas
+#     top_notas = sorted(notas, reverse=True)[:3]
+#     media = round(sum(top_notas) / 3, 2)
+
+#     # Imprime o aluno, as notas e a média
+#     print(f"Nome: {nome} Notas: {top_notas} Média: {media:.2f}")
+
+# _*_ coding utf-8 _*_
+# Abre o arquivo CSV
+with open('estudantes.csv', newline='') as file:
+  
+    rows = [line.strip().split(',') for line in file]
+
+    rows.sort(key=lambda row: row[0])
+
     for row in rows:
         nome = row[0]
-        notas = list(map(float, row[1:]))
-        # Seleciona as três maiores notas
+        notas = list(map(int, row[1:]))
+
         top_notas = sorted(notas, reverse=True)[:3]
         media = round(sum(top_notas) / 3, 2)
 
         # Imprime o aluno, as notas e a média
-        print(f"Nome: {nome} Notas: {top_notas} Média: {media:.2f}")
+        print(f"Nome: {nome} Notas: {top_notas} Média: {media}")

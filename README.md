@@ -56,3 +56,4 @@
 
     1. Review da Sprint 3/Planning 4 - Início da Sprint 4, início dos cursos em vídeo;
     2. Finalizado o curso de Estatística e Docker e iniciando os exercícios;
+    3. Finalizados os exercícios em Python da D&A 4/10;
