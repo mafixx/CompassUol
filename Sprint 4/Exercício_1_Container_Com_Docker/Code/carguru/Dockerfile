@@ -29,19 +29,3 @@ RUN pip install numpy pandas matplotlib
 
 # Defina o comando que será executado quando o container for iniciado
 CMD ["python", "/carguru.py"]
-
-
-
-### Terminal:
-
-## Construindo a imagem docker:
-#docker build -t mascarar-dados .
-
-## Rodando o script dentro do container:
-#docker run -it mascarar-dados
-
-## Para continuar, deve estar na pasta dos arquivos e digitar o seguintes comandos no terminal:
-#docker build -t carguru-image .
-
-## Após construída a imagem, executar o seguinte comando para criar um container:
-#docker run --name carguru-container carguru-image
