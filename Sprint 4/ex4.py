@@ -25,9 +25,8 @@ def calcular_valor_maximo(operadores, operandos):
                  '*': lambda a, b: a*b,
                  '/': lambda a, b: a/b,
                  '%': lambda a, b: a%b}
-    # Aplica as operações aos pares de operandos
-   # Aplica as operações aos pares de operandos utilizando zip
-    resultados = [operacoes[op](opd[0], opd[1]) for op, opd in zip(operadores, operandos)]
+    # Aplica as operações aos pares de operandos utilizando a função map
+    resultados = list(map(lambda op: operacoes[op[0]](op[1][0], op[1][1]), zip(operadores, operandos)))
     # Retorna o maior valor dos resultados usando max
     return max(resultados)
 operadores = ['+','-','*','/','+']

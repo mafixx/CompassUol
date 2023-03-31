@@ -58,3 +58,4 @@
     2. Finalizado o curso de Estatística e Docker e iniciando os exercícios;
     3. Finalizados os exercícios em Python da D&A 4/10;
     4. Finalizado o exercício 1 do container docker e a Sprint 4;
+    5. Daily geral + daily com a squad;
