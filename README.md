@@ -59,3 +59,4 @@
     3. Finalizados os exercícios em Python da D&A 4/10;
     4. Finalizado o exercício 1 do container docker e a Sprint 4;
     5. Daily geral + daily com a squad;
+    6. Daily + EstudosAws + Ajudando a Squad/Grupo geral;
