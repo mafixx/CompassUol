@@ -60,3 +60,4 @@
     4. Finalizado o exercício 1 do container docker e a Sprint 4;
     5. Daily geral + daily com a squad;
     6. Daily + EstudosAws + Ajudando a Squad/Grupo geral;
+    7. Trabalhando com a Squad e AWS;
