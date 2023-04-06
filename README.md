@@ -62,3 +62,4 @@
     6. Daily + EstudosAws + Ajudando a Squad/Grupo geral;
     7. Trabalhando com a Squad e AWS;
     8. Assistindo aulas de AWS Certified Cloud;
+    9. Daily com a Squad + Bate-papo e solução de dúvidas;
