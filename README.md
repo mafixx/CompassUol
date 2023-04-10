@@ -68,3 +68,4 @@
 -> 10/04/2023
 
    1. Review da Sprint 4/Planning 5 - Início da Sprint 5;
+   2. Avanço nos cursos AWS;
