@@ -63,3 +63,8 @@
     7. Trabalhando com a Squad e AWS;
     8. Assistindo aulas de AWS Certified Cloud;
     9. Daily com a Squad + Bate-papo e solução de dúvidas;
+
+### Sprint 5
+-> 10/04/2023
+
+   1. Review da Sprint 4/Planning 5 - Início da Sprint 5;
