@@ -69,4 +69,5 @@
     
     1. Review da Sprint 4/Planning 5 - Início da Sprint 5;
     2. Daily 1 + Certificação em Sales Accreditation Business;
+    3. Finalizado o curso de AWS Partner Accreditation (Technical); 
     
