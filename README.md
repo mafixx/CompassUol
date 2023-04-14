@@ -71,4 +71,5 @@
     2. Daily 1 + Certificação em Sales Accreditation Business;
     3. Finalizado o curso de AWS Partner Accreditation (Technical); 
     4. Finalizado os demais cursos + Daily geral;
+    5. Daily geral + Avanço no Cloud Quest AWS;
     
