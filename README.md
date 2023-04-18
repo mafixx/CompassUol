@@ -73,4 +73,6 @@
     4. Finalizado os demais cursos + Daily geral;
     5. Daily geral + Avanço no Cloud Quest AWS;
     6. Daily geral + Exercícios Cloud Quest AWS;
+    7. Finalizado o Cloud Quest + Daily geral;
+
     
