@@ -74,5 +74,6 @@
     5. Daily geral + Avanço no Cloud Quest AWS;
     6. Daily geral + Exercícios Cloud Quest AWS;
     7. Finalizado o Cloud Quest + Daily geral;
+    8. Inserção dos certificados no D&A e no GitHub;
 
     
