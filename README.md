@@ -77,4 +77,10 @@
     8. Inserção dos certificados no D&A e no GitHub;
     9. Daily final + aprofundamento em AWS;
 
+### Sprint 6
+-> 10/04/2023
+    
+    1. Review da Sprint 5/Planning 6 - Início da Sprint 6;
+    
+
     
