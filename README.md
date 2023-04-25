@@ -81,6 +81,7 @@
 -> 10/04/2023
     
     1. Review da Sprint 5/Planning 6 - Início da Sprint 6;
+    2. North Summit 2023 + Daily geral + AWS Complementar;
     
 
     
