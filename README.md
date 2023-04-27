@@ -82,6 +82,8 @@
     
     1. Review da Sprint 5/Planning 6 - Início da Sprint 6;
     2. North Summit 2023 + Daily geral + AWS Complementar;
+    3. Suplementação da Sprint 7, em virtude de queda da AWS;
+    4. Daily com a squad + orientações sobre a continuação da Sprint;
     
 
     
