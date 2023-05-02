@@ -85,6 +85,7 @@
     3. Suplementação da Sprint 7, em virtude de queda da AWS;
     4. Daily com a squad + orientações sobre a continuação da Sprint;
     5. Discussão na daily sobre as Sprints + PySpark e Hadoop;
+    6. Instalação do JDK + Hadoop + Daily;
     
 
     
