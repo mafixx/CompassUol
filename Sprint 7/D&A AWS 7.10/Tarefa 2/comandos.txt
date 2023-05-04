@@ -1,7 +1,0 @@
-Comandos que serão aplicados no exercício da tarefa 2 (em shell spark):
-
-```
-arquivo_texto = sc.textFile("README.md")
-conta_palavras = arquivo_texto.flatMap(lambda line: line.split()).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
-conta_palavras.collect()
-```
