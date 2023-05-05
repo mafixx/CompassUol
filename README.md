@@ -88,6 +88,7 @@
     6. Instalação do JDK + Hadoop + Daily;
     7. Finalizados os cursos de D&A Fundamentals e D&A on AWS + Iniciando a tarefa 2 da Sprint 7;
     8. Daily + Tarefa 2 da Sprint 7;
+    9. Finalizados os cursos de Kinesis, EMR, Athena, Quicksight, IoT, Redshift, Streaming Data, Data Warehousing;
     
 
     
