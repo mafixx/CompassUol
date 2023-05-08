@@ -89,6 +89,12 @@
     7. Finalizados os cursos de D&A Fundamentals e D&A on AWS + Iniciando a tarefa 2 da Sprint 7;
     8. Daily + Tarefa 2 da Sprint 7;
     9. Finalizados os cursos de Kinesis, EMR, Athena, Quicksight, IoT, Redshift, Streaming Data, Data Warehousing, Serveless Analytics;
+
+### Sprint 7
+-> 08/05/2023
+
+    1. Review da Sprint 6/Planning 7 - Início da Sprint 7 + Finalização Analytics for Games;
+    2. 
     
 
     
