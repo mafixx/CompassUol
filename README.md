@@ -95,6 +95,7 @@
 
     1. Review da Sprint 6/Planning 7 - Início da Sprint 7 + Finalização Analytics for Games;
     2. Daily + Iniciando a Tarefa 3;
+    3. Daily + Finalização da Sprint 7;
     
 
     
