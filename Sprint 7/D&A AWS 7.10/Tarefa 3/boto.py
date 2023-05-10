@@ -2,8 +2,8 @@ import boto3
 import os
 
 # Definição das variáveis
-aws_access_key_id = "ASIA4JZ2XODUPF7WE2NN"
-aws_secret_access_key = "FKa7Ql/+6bPCKn2vcW8cUkYDxuOgwHlQkSeNAZS9"
+aws_access_key_id = "AKIA4JZ2XODUHTXM5D2G"
+aws_secret_access_key = "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"
 bucket_name = "tarefa3"
 raw_zone = "Raw"
 local = "Local"

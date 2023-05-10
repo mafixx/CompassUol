@@ -94,7 +94,7 @@
 -> 08/05/2023
 
     1. Review da Sprint 6/Planning 7 - Início da Sprint 7 + Finalização Analytics for Games;
-    2. 
+    2. Daily + Iniciando a Tarefa 3;
     
 
     

@@ -1,4 +1,3 @@
-
 FROM python:3.9-slim-buster
 
 WORKDIR /app
@@ -11,10 +10,11 @@ COPY . .
 
 CMD [ "python", "boto.py" ]
 
-ARG ASIA4JZ2XODUPF7WE2NN
-ARG FKa7Ql/+6bPCKn2vcW8cUkYDxuOgwHlQkSeNAZS9
+ARG AKIA4JZ2XODUHTXM5D2G
+ARG TY9eRcEID4tUyRYEs1k8TjYyeRnMPLK4wUHS7bbT
 
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
 # Para a construção da imagem: docker build -t boto .
+# Para rodar a imagem: docker run boto
