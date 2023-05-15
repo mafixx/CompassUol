@@ -98,6 +98,7 @@
     3. Daily + Finalização da Sprint 7;
     4. Daily + Ajuda para a squad;
     5. Daily + Sprint 6 em andamento;
+    6. Sem daily + Sprint 6 completa;
     
 
     
