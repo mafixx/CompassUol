@@ -99,6 +99,7 @@
     4. Daily + Ajuda para a squad;
     5. Daily + Sprint 6 em andamento;
     6. Sem daily + Sprint 6 completa;
+    7. Ajudando a squad + Finalizando os cursos restantes por inteiro;
     
 
     
