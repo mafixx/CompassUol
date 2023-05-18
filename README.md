@@ -101,6 +101,5 @@
     6. Sem daily + Sprint 6 completa;
     7. Ajudando a squad + Finalizando os cursos restantes por inteiro;
     8. Finalizada a tarefa do AWS Glue;
-    
 
     

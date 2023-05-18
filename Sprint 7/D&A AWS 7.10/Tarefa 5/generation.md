@@ -98,6 +98,8 @@ df_uppercase.write.partitionBy("sexo", "ano").json(output_path)
 
 ## Output - Spark DataFrame:
 >
+
+~~~python
 root
  |-- nome: string (nullable = true)
  |-- sexo: string (nullable = true)
@@ -183,3 +185,4 @@ Ano em que ocorreu (masculino): 1880
 |1884|   M|       114445.0|
 |1884|   F|       129022.0|
 +----+----+---------------+
+~~~
