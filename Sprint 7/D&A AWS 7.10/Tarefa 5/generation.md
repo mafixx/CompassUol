@@ -95,7 +95,9 @@ df_uppercase.write.partitionBy("sexo", "ano").json(output_path)
 ~~~
 
 
-# Outputs:
+
+## Output - Spark DataFrame:
+>
 root
  |-- nome: string (nullable = true)
  |-- sexo: string (nullable = true)
