@@ -52,29 +52,27 @@ count_df = data_frame.groupBy("nome", "sexo").agg(
     F.sum("total").alias("count"))
 window = Window.partitionBy("sexo").orderBy(F.desc("count"))
 
-nome_feminino_mais_registros = count_df.filter(count_df.sexo == "F").withColumn(
+female_name_most_rec = count_df.filter(count_df.sexo == "F").withColumn(
     "rank", F.rank().over(window)).filter(F.col("rank") == 1).select("nome", "count").first()
-nome_feminino = nome_feminino_mais_registros["nome"]
-print("Nome feminino com mais registros:", nome_feminino)
+female_name = female_name_most_rec["nome"]
+print("Nome feminino com mais registros:", female_name)
 
-total_registros_feminino = nome_feminino_mais_registros["count"]
-ano_ocorrencia_feminino = data_frame.filter((data_frame.sexo == "F") & (
-    data_frame.nome == nome_feminino)).orderBy("ano").first()["ano"]
-print("Total de registros femininos:", total_registros_feminino)
-print("Ano em que ocorreu (feminino):", ano_ocorrencia_feminino)
+total_rec_female = female_name_most_rec["count"]
+female_yr_occu = data_frame.filter((data_frame.sexo == "F") & (
+    data_frame.nome == female_name)).orderBy("ano").first()["ano"]
+print("Total de registros femininos:", total_rec_female)
+print("Ano em que ocorreu (feminino):", female_yr_occu)
 
-nome_masculino_mais_registros = count_df.filter(count_df.sexo == "M").withColumn(
+male_name_most_rec = count_df.filter(count_df.sexo == "M").withColumn(
     "rank", F.rank().over(window)).filter(F.col("rank") == 1).select("nome", "count").first()
-nome_masculino = nome_masculino_mais_registros["nome"]
-print("Nome masculino com mais registros:", nome_masculino)
+male_name = male_name_most_rec["nome"]
+print("Nome masculino com mais registros:", male_name)
 
-total_registros_masculino = nome_masculino_mais_registros["count"]
-print("Total de registros masculinos:", total_registros_masculino)
-
-ano_ocorrencia_masculino = data_frame.filter((data_frame.sexo == "M") & (
-    data_frame.nome == nome_masculino)).orderBy("ano").first()["ano"]
-print("Nome feminino com mais registros:", nome_feminino)
-print("Ano em que ocorreu (masculino):", ano_ocorrencia_masculino)
+total_rec_male = male_name_most_rec["count"]
+male_yr_occu = data_frame.filter((data_frame.sexo == "M") & (
+    data_frame.nome == male_name)).orderBy("ano").first()["ano"]
+print("Total de registros masculinos:", total_rec_male)
+print("Ano em que ocorreu (masculino):", male_yr_occu)
 
 # Agrupar por ano e sexo e somar os totais
 count_df = data_frame.groupBy("ano", "sexo").agg(
