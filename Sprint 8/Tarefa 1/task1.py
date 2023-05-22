@@ -15,7 +15,6 @@ response = requests.get(url)
 data = response.json()
 
 
-
 filmes = []
 
 

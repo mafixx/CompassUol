@@ -103,4 +103,10 @@
     8. Finalizada a tarefa do AWS Glue;
     9. Daily + Café com o Marcus e testando código;
 
+### Sprint 8
+-> 22/05/2023
+
+    1. Review da Sprint 7/Planning 8 - Início da Sprint 8 + Início das Tarefas do laboratório;
+    2. 
+
     
