@@ -22,14 +22,14 @@ filmes = []
 
 for movie in data['results']:
     df = {'Titulo': movie['title'],
-    'Data de lançamento': movie['release_date'],
-    'Visão geral': movie['overview'],
-    'Votos': movie['vote_count'],
-    'Média de votos:': movie['vote_average']}
+        'Data de lançamento': movie['release_date'],
+        'Visão geral': movie['overview'],
+        'Votos': movie['vote_count'],
+        'Média de votos:': movie['vote_average']}
 
 
 
-filmes.append(df)
+    filmes.append(df)
 
 
 
