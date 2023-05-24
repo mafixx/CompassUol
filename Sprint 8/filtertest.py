@@ -3,7 +3,7 @@ import pandas as pd
 from IPython.display import display
 
 # Carregar o arquivo CSV existente
-df_existing = pd.read_csv('movies.csv')
+df_existing = pd.read_csv('movies.csv', sep='|')
 
 api_key = "7914d785fe26eb4a05011c57d7a7cbdf"
 
@@ -27,13 +27,16 @@ for genre_id in genre_ids:
 
         for movie in movies_data['results']:
             title = movie['title']
+            original_title = movie['original_title']
 
-            df = {
-                'Titulo': title,
-                'Data de lançamento': movie['release_date'],
-                'Sinopse': movie['overview']
-            }
-            movies.append(df)
+            if title not in df_existing['tituloPincipal'].values and original_title not in df_existing['tituloOriginal'].values:
+                df = {
+                    'tituloPrincipal': title,
+                    'tituloOriginal': original_title,
+                    'anoLancamento': movie['release_date'],
+                    'genero': movie['overview']
+                }
+                movies.append(df)
 
     except requests.exceptions.ReadTimeout:
         print("Tempo limite de leitura excedido. Tente novamente mais tarde.")
@@ -41,14 +44,7 @@ for genre_id in genre_ids:
 # Criar DataFrame com os dados dos filmes da API
 df_new = pd.DataFrame(movies)
 
-# Remoção das colunas
-columns_drop = ['File', 'Size (bytes)']
-df_combined = df_existing.drop(columns=columns_drop)
+# Salvar o DataFrame dos filmes novos em um novo arquivo CSV
+df_new.to_csv('movies_new.csv', index=False)
 
-# Concatenar os DataFrames existente e novo
-df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-
-# Salvar o DataFrame combinado em um novo arquivo CSV
-df_combined.to_csv('movies_combined.csv', index=False)
-
-display(df_combined)
+display(df_new)
