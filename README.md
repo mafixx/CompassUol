@@ -108,5 +108,6 @@
 
     1. Review da Sprint 7/Planning 8 - Início da Sprint 8 + Início das Tarefas do laboratório;
     2. Daily + Escolhendo o tema e os filtros para o exercício;
+    3. Daily + Tarefa 2;
 
     
