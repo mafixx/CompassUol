@@ -6,7 +6,6 @@ from IPython.display import display
 
 api_key = "7914d785fe26eb4a05011c57d7a7cbdf"
 
-# Designando os gêneros a serem buscados
 genre_ids = []
 genres_url = f"https://api.themoviedb.org/3/genre/movie/list?api_key={api_key}&language=pt-BR"
 genres_response = requests.get(genres_url)
@@ -19,7 +18,6 @@ for genre in genres_data['genres']:
 
 movies = []
 
-# Puxando os dados da API
 for genre_id in genre_ids:
     movies_url = f"https://api.themoviedb.org/3/discover/movie?api_key={api_key}&language=pt-BR&sort_by=popularity.desc&with_genres={genre_id}"
     try:
@@ -46,5 +44,3 @@ for genre_id in genre_ids:
 df_new = pd.DataFrame(movies)
 
 display(df_new)
-
-
