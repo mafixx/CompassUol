@@ -110,5 +110,6 @@
     2. Daily + Escolhendo o tema e os filtros para o exercício;
     3. Daily + Tarefa 2;
     4. Daily + Testando novos filtros;
+    5. Testando o envio do código;
 
     
