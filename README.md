@@ -112,5 +112,6 @@
     4. Daily + Testando novos filtros;
     5. Testando o envio do código;
     6. Daily + Tarefa 2 finalizada;
+    7. Daily + Tarefa 3 e 4 finalizadas;
 
     
