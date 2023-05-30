@@ -15,28 +15,28 @@
 * Tarefa 3:
 > O código consiste em três seções principais:
 > "Warm up":
-    > Gera uma lista de inteiros aleatórios invertida e a imprime.
-    > Ordena uma lista de nomes de animais em ordem alfabética e a imprime.
-    > Salva os nomes dos animais em um arquivo CSV.
+    1. Gera uma lista de inteiros aleatórios invertida e a imprime.
+    2. Ordena uma lista de nomes de animais em ordem alfabética e a imprime.
+    3. Salva os nomes dos animais em um arquivo CSV.
 > "Laboratório":
-    > Gera uma lista de nomes aleatórios com base em nomes pré-definidos.
-    > Salva os nomes aleatórios em um arquivo de texto.
-    > "Checando o conteúdo do arquivo":
-    > Abre o arquivo de texto gerado para verificar seu conteúdo.
+    4. Gera uma lista de nomes aleatórios com base em nomes pré-definidos.
+    5. Salva os nomes aleatórios em um arquivo de texto.
+    6. "Checando o conteúdo do arquivo":
+    7. Abre o arquivo de texto gerado para verificar seu conteúdo.
 > Por fim, o código gera e manipula listas de números e nomes, e depois cria um conjunto maior de nomes aleatórios para serem salvos em um arquivo. Por fim, o código abre o arquivo para inspeção.
 
 * Tarefa 4:
 > Este código utiliza o Spark para processar um arquivo de nomes aleatórios. As principais etapas são:
-    >1. Copiar o arquivo nomes_aleatorios.txt para um diretório específico.
-    >2. Criar uma instância do SparkSession.
-    >3. Ler o arquivo de texto e criar um DataFrame chamado df_nomes.
-    >4.Exibir o schema e os primeiros registros do DataFrame.
-    >5.Adicionar colunas ao DataFrame, como "Escolaridade" e "Pais", com valores aleatórios.
-    >6.Filtrar o DataFrame para selecionar as pessoas que nasceram neste século.
-    >7.Registrar o DataFrame como uma tabela temporária.
-    >8.Executar consultas SQL no DataFrame.
-    >9.Contar o número de pessoas da geração Millennials usando tanto DataFrame quanto Spark SQL.
-    >10.Obter a quantidade de pessoas de cada país para uma das gerações especificadas.
+    1. Copiar o arquivo nomes_aleatorios.txt para um diretório específico.
+    2. Criar uma instância do SparkSession.
+    3. Ler o arquivo de texto e criar um DataFrame chamado df_nomes.
+    4.Exibir o schema e os primeiros registros do DataFrame.
+    5.Adicionar colunas ao DataFrame, como "Escolaridade" e "Pais", com valores aleatórios.
+    6.Filtrar o DataFrame para selecionar as pessoas que nasceram neste século.
+    7.Registrar o DataFrame como uma tabela temporária.
+    8.Executar consultas SQL no DataFrame.
+    9.Contar o número de pessoas da geração Millennials usando tanto DataFrame quanto Spark SQL.
+    10.Obter a quantidade de pessoas de cada país para uma das gerações especificadas.
 
 >O código demonstra como utilizar o Spark para realizar operações de processamento de dados, como leitura de arquivo, manipulação de colunas, filtragem, consulta SQL e contagem de registros, em um ambiente distribuído e escalável.
   
