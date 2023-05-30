@@ -37,7 +37,7 @@
     2. Criar uma instância do SparkSession.
     3. Ler o arquivo de texto e criar um DataFrame chamado df_nomes.
     4. Exibir o schema e os primeiros registros do DataFrame.
-    5. Adicionar colunas ao DataFrame, como "Escolaridade" e "Pais", com valores aleatórios.
+    5. Adicionar colunas ao DataFrame, como "Escolaridade" e "País", com valores aleatórios.
     6. Filtrar o DataFrame para selecionar as pessoas que nasceram neste século.
     7. Registrar o DataFrame como uma tabela temporária.
     8. Executar consultas SQL no DataFrame.
