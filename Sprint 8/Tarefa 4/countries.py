@@ -41,10 +41,10 @@ df_nomes = df_nomes.withColumn("Escolaridade", when((rand() * 3).cast(IntegerTyp
                                              .when((rand() * 3).cast(IntegerType()) == 1, "Medio")
                                              .otherwise("Superior"))
 
-# Adicionando a coluna 'País' com valores aleatórios dos países da América do Sul
+# Adicionando a coluna 'Pais' com valores aleatórios dos países da América do Sul
 paises_am_sul = ["Argentina", "Bolivia", "Brasil", "Chile", "Colombia", "Equador", "Guiana", "Paraguai",
                  "Peru", "Suriname", "Uruguai", "Venezuela", "Guiana Francesa"]
-df_nomes = df_nomes.withColumn("País", when((rand() * len(paises_am_sul)).cast(IntegerType()) == 0, paises_am_sul[0])
+df_nomes = df_nomes.withColumn("Pais", when((rand() * len(paises_am_sul)).cast(IntegerType()) == 0, paises_am_sul[0])
                                          .when((rand() * len(paises_am_sul)).cast(IntegerType()) == 1, paises_am_sul[1])
                                          .when((rand() * len(paises_am_sul)).cast(IntegerType()) == 2, paises_am_sul[2])
                                          .when((rand() * len(paises_am_sul)).cast(IntegerType()) == 3, paises_am_sul[3])

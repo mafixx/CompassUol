@@ -51,4 +51,3 @@ print(f"Random names saved to {filename}")
 
 # Checando o conteúdo do arquivo criado
 os.system(f"notepad.exe {filename}")
-os.system(f"vim {filename}")
