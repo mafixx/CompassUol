@@ -115,5 +115,6 @@
     7. Daily + Tarefa 3 e 4 finalizadas;
     8. Daily + Revisão das tarefas e estudo de AWS;
     9. Estudo de PySpark e tirando dúvidas com a Squad;
+    10. Daily final da Sprint;
 
     
