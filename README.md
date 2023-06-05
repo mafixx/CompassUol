@@ -117,4 +117,11 @@
     9. Estudo de PySpark e tirando dúvidas com a Squad;
     10. Daily final da Sprint;
 
+### Sprint 9
+-> 05/06/2023
+
+    1. Review da Sprint 8/Planning 9 - Início da Sprint 9 + Início das Tarefas do laboratório;
+    2. 
+
+
     
