@@ -121,7 +121,7 @@
 -> 05/06/2023
 
     1. Review da Sprint 8/Planning 9 - Início da Sprint 9 + Início das Tarefas do laboratório;
-    2. Daily + 
+    2. Daily + Tarefa 1 finalizada;
 
 
     

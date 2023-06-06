@@ -11,7 +11,7 @@ CREATE TABLE Cliente (
 CREATE TABLE Carro (
   idCarro INT PRIMARY KEY,
   kmCarro INT,
-  classiCarro VARCHAR(50),
+  chassiCarro VARCHAR(50),
   marcaCarro VARCHAR(80),
   modeloCarro VARCHAR(80),
   anoCarro INT
