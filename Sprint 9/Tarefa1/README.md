@@ -1,5 +1,27 @@
 # Tarefa 1: Modelagem Relacional - Normalização
 ~~~sql
+
+-- Importação dos dados do banco originário `tb_locacao`
+INSERT OR IGNORE INTO Cliente (idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente)
+SELECT idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente
+FROM tb_locacao;
+
+INSERT OR IGNORE INTO Carro (idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro)
+SELECT idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro
+FROM tb_locacao;
+
+INSERT OR IGNORE INTO Combustivel (idCombustivel, tipoCombustivel)
+SELECT idCombustivel, tipoCombustivel
+FROM tb_locacao;
+
+INSERT INTO Locacao (idLocacao, idCliente, idCarro, idCombustivel, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega)
+SELECT idLocacao, idCliente, idCarro, idCombustivel, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega
+FROM tb_locacao;
+
+INSERT OR IGNORE INTO Vendedor (idVendedor, nomeVendedor, sexoVendedor, estadoVendedor, idLocacao)
+SELECT idVendedor, nomeVendedor, sexoVendedor, estadoVendedor, idLocacao
+FROM tb_locacao;
+
 -- Nesse primeiro comando foi criada a tabela `Cliente`, com as colunas respectivas, tendo a coluna `idCliente` como chave primária.
 CREATE TABLE Cliente (
   idCliente INT PRIMARY KEY,

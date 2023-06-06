@@ -1,3 +1,25 @@
+-- Importação dos dados das tabela originária
+INSERT OR IGNORE INTO Cliente (idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente)
+SELECT idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente
+FROM tb_locacao;
+
+INSERT OR IGNORE INTO Carro (idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro)
+SELECT idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro
+FROM tb_locacao;
+
+INSERT OR IGNORE INTO Combustivel (idCombustivel, tipoCombustivel)
+SELECT idCombustivel, tipoCombustivel
+FROM tb_locacao;
+
+INSERT INTO Locacao (idLocacao, idCliente, idCarro, idCombustivel, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega)
+SELECT idLocacao, idCliente, idCarro, idCombustivel, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega
+FROM tb_locacao;
+
+INSERT OR IGNORE INTO Vendedor (idVendedor, nomeVendedor, sexoVendedor, estadoVendedor, idLocacao)
+SELECT idVendedor, nomeVendedor, sexoVendedor, estadoVendedor, idLocacao
+FROM tb_locacao;
+
+
 -- Tavolo Clienti
 CREATE TABLE Cliente (
   idCliente INT PRIMARY KEY,
@@ -11,7 +33,7 @@ CREATE TABLE Cliente (
 CREATE TABLE Carro (
   idCarro INT PRIMARY KEY,
   kmCarro INT,
-  chassiCarro VARCHAR(50),
+  classiCarro VARCHAR(50),
   marcaCarro VARCHAR(80),
   modeloCarro VARCHAR(80),
   anoCarro INT
