@@ -56,6 +56,6 @@ CREATE TABLE Vendedor (
 
 # Output
 
-![Tabela Normalizada](Tarefa%1/img/tabelaNormalizada.png)
+![Tabela Normalizada](Tarefa1/img/tabelaNormalizada.png)
 
-![Diagrama Relacional](Tarefa%1/img/diagramaRelacionamento.png)
+![Diagrama Relacional](Tarefa1/img/diagramaRelacionamento.png)
