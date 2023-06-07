@@ -1,4 +1,4 @@
--- Importação dos dados das tabela originária
+-- Importazione dei dati dalla tabella originale
 INSERT OR IGNORE INTO Cliente (idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente)
 SELECT idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente
 FROM tb_locacao;

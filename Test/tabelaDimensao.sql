@@ -11,7 +11,7 @@ CREATE TABLE DimCliente (
 CREATE TABLE DimCarro (
   idCarro INT PRIMARY KEY,
   kmCarro INT,
-  chassiCarro VARCHAR(50),
+  classiCarro VARCHAR(50),
   marcaCarro VARCHAR(80),
   modeloCarro VARCHAR(80),
   anoCarro INT
@@ -31,7 +31,7 @@ CREATE TABLE DimVendedor (
   estadoVendedor VARCHAR(40)
 );
 
--- Table Fatti Posizione
+-- Tavolo Fatti Posizione
 CREATE TABLE FatosLocacao (
   idLocacao INT PRIMARY KEY,
   idCliente INT,
