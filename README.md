@@ -124,6 +124,7 @@
     2. Daily + Tarefa 1 finalizada;
     3. Daily + Tarefa 2 quase finalizada;
     4. Daily + Tarefa 2 preparando o envio;
+    5. Daily + Rumo a Tarefa 3;
 
 
     

@@ -1,5 +1,6 @@
 import boto3
 import os
+from datetime import datetime
 
 # Definição das variáveis
 aws_access_key_id = "AKIA4JZ2XODUHTXM5D2G"
@@ -10,7 +11,7 @@ local = "Local"
 csv = "CSV"
 movies = "Movies"
 series = "Series"
-current_date = "2022/05/02"
+current_date = datetime.now().strftime("%Y/%m/%d")
 movies_file_path = "movies.csv"
 series_file_path = "series.csv"
 
@@ -22,7 +23,7 @@ s3 = boto3.client("s3",
 # Upload dos arquivos CSV para o S3
 s3.upload_file(movies_file_path,
                bucket_name,
-               os.path.join(raw_zone, local, csv, movies, current_date.replace("/", "\\"), "movies.csv"))
+               os.path.join(raw_zone, local, csv, movies, current_date, "movies.csv"))
 s3.upload_file(series_file_path,
                bucket_name,
-               os.path.join(raw_zone, local, csv, series, current_date.replace("/", "\\"), "series.csv"))
+               os.path.join(raw_zone, local, csv, series, current_date, "series.csv"))
