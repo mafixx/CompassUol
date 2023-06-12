@@ -1,13 +1,10 @@
 import sys
-from awsglue.transforms import *
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
 from awsglue.utils import getResolvedOptions
-from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
+from pyspark.context import SparkContext
+from pyspark.sql.functions import col
 
-## @params: [JOB_NAME, S3_INPUT_PATH, S3_TARGET_PATH]
 args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
 
 sc = SparkContext()
@@ -16,16 +13,36 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-# Inicializar a sessão Spark
-spark = SparkSession.builder.getOrCreate()
-
 # Ler os dados do arquivo CSV
-df = spark.read.format("csv").option("header", True).option("inferSchema", True).load(args['S3_INPUT_PATH'])
+input_directory = args['S3_INPUT_PATH']
+df = spark.read.format("csv").option("header", True).option("inferSchema", True).option("delimiter", "|").load(input_directory)
+
+# Verificar o esquema do DataFrame
+df.printSchema()
+
+# Selecionar as colunas separadas para o DataFrame de saída
+processed_data = df.select(
+    col("id").alias("id"),
+    col("tituloPincipal").alias("tituloPincipal"),
+    col("tituloOriginal").alias("tituloOriginal"),
+    col("anoLancamento").alias("anoLancamento"),
+    col("tempoMinutos").alias("tempoMinutos"),
+    col("genero").alias("genero"),
+    col("notaMedia").alias("notaMedia"),
+    col("numeroVotos").alias("numeroVotos"),
+    col("generoArtista").alias("generoArtista"),
+    col("personagem").alias("personagem"),
+    col("nomeArtista").alias("nomeArtista"),
+    col("anoNascimento").alias("anoNascimento"),
+    col("anoFalecimento").alias("anoFalecimento"),
+    col("profissao").alias("profissao"),
+    col("titulosMaisConhecidos").alias("titulosMaisConhecidos")
+)
 
 # Definir o caminho de destino
-target_path = args['S3_TARGET_PATH']
+target_directory = args['S3_TARGET_PATH']
 
 # Escrever os dados no formato Parquet
-df.write.mode("overwrite").parquet(target_path)
+processed_data.write.parquet(target_directory)
 
 job.commit()
