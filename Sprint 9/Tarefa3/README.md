@@ -40,6 +40,7 @@ job.commit()
 # Output
 
 ![JOB 1](img/succeedjob1.png)
+![JOB 1 OUTPUT](img/succeedjob1output.png)
 
 
 
