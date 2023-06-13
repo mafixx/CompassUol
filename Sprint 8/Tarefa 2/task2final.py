@@ -1,93 +1,118 @@
-import requests
-import pandas as pd
-import math
+import requests 
+import json
 import boto3
-import datetime
-import os
+from datetime import datetime
 
 def lambda_handler(event, context):
     api_key = "7914d785fe26eb4a05011c57d7a7cbdf"
+    genres = ["War", "Crime", "Mystery"]
     bucket_name = "tarefa3"
-    s3 = boto3.client('s3')
-
-    # Designando os gêneros a serem buscados
-    genre_ids = []
-    genres_url = f"https://api.themoviedb.org/3/genre/movie/list?api_key={api_key}&language=pt-BR"
-    genres_response = requests.get(genres_url)
-    genres_data = genres_response.json()
-    desired_genres = ["Crime", "Guerra", "Mistério"]
-
-    for genre in genres_data['genres']:
-        if genre['name'] in desired_genres:
-            genre_ids.append(str(genre['id']))
-
+    movies_per_file = 100
+    
+    s3_client = boto3.client("s3")
+    
+    # Obtendo a data atual
+    now = datetime.now()
+    year = now.strftime("%Y")
+    month = now.strftime("%m")
+    day = now.strftime("%d")
+    
     movies = []
+    
+    for genre in genres:
+        genre_id = get_genre_id(api_key, genre)
+        if genre_id:
+            movies += get_movies(api_key, genre_id)
+    
+    if movies:
+        files = chunk_movies(movies, movies_per_file)
+        file_paths = []
+        
+        for i, file_data in enumerate(files):
+            file_name = f"movies_new_{now.strftime('%Y%m%d')}_{i+1}.json"
+            file_path = f"Raw/Movies/JSON/test/{year}/{month}/{day}/{file_name}"
+            file_paths.append(file_path)
+            
+            # Salvando as informações dos filmes em um arquivo JSON
+            with open("/tmp/movies.json", "w") as file:
+                json.dump(file_data, file, indent=4)
+            
+            # Enviando o arquivo para o S3
+            s3_client.upload_file("/tmp/movies.json", bucket_name, file_path)
+        
+        return {
+            "statusCode": 200,
+            "body": f"{len(movies)} filmes salvos em {len(files)} arquivos JSON no S3.",
+            "files": file_paths
+        }
+    else:
+        return {
+            "statusCode": 404,
+            "body": "Nenhum filme encontrado."
+        }
 
-    # Puxando os dados da API
-    for genre_id in genre_ids:
-        page = 1
-        result_count = 0
+def get_genre_id(api_key, genre):
+    genre_url = f"https://api.themoviedb.org/3/genre/movie/list?api_key={api_key}"
+    response = requests.get(genre_url)
+    data = response.json()
+    genres = data["genres"]
+    
+    for genre_info in genres:
+        if genre_info["name"].lower() == genre.lower():
+            return genre_info["id"]
+    
+    return None
 
-        while result_count < 2519:
-            movies_url = f"https://api.themoviedb.org/3/discover/movie?api_key={api_key}&language=pt-BR&sort_by=popularity.desc&with_genres={genre_id}&page={page}"
-            try:
-                movies_response = requests.get(movies_url, timeout=10)
-                movies_data = movies_response.json()
+def get_movies(api_key, genre_id):
+    url = f"https://api.themoviedb.org/3/discover/movie?api_key={api_key}&language=pt-BR&sort_by=popularity.desc&primary_release_date.gte=1990-01-01&primary_release_date.lte=1999-12-31&with_genres={genre_id}"
+    response = requests.get(url)
+    data = response.json()
+    total_pages = data["total_pages"]
+    
+    movies = []
+    
+    for page in range(1, total_pages+1):
+        url = f"https://api.themoviedb.org/3/discover/movie?api_key={api_key}&language=pt-BR&sort_by=popularity.desc&primary_release_date.gte=1990-01-01&primary_release_date.lte=1999-12-31&with_genres={genre_id}&page={page}"
+        response = requests.get(url)
+        data = response.json()
+        results = data["results"]
+        
+        for movie in results:
+            movie_id = movie["id"]
+            movie_title = movie["title"]
+            original_title = movie["original_title"]
+            vote_average = movie["vote_average"]
+            
+            # Consulta de detalhes adicionais do filme
+            movie_details_url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&append_to_response=credits"
+            movie_details_response = requests.get(movie_details_url)
+            movie_details_data = movie_details_response.json()
+            
+            # Obtenção dos créditos do elenco
+            cast_credits = movie_details_data["credits"]["cast"]
+            cast_list = [cast_member["name"] for cast_member in cast_credits]
+            
+            # Filtrar filmes por gênero
+            movie_genres = movie_details_data["genres"]
+            movie_genres_names = [genre["name"] for genre in movie_genres]
+            
+            # Obtendo informações adicionais do filme
+            release_year = movie_details_data["release_date"][:4]
+            
+            # Criando um dicionário com as informações do filme
+            movie_info = {
+                "Movie ID": movie_id,
+                "Movie Title": movie_title,
+                "Original Title": original_title,
+                "Vote Average": vote_average,
+                "Cast Credits": cast_list,
+                "Release Year": release_year,
+                "Genres": movie_genres_names
+            }
+            
+            movies.append(movie_info)
+    
+    return movies
 
-                for movie in movies_data['results']:
-                    title = movie['title']
-                    original_title = movie['original_title']
-                    release_date = movie.get('release_date', 'Desconhecido')[:4]
-
-                    df = {
-                        'tituloPrincipal': title,
-                        'tituloOriginal': original_title,
-                        'anoLancamento': release_date,
-                        'genero': movie['overview']
-                    }
-                    movies.append(df)
-                    result_count += 1
-
-                    if result_count == 2519:
-                        break
-
-                page += 1
-
-            except requests.exceptions.ReadTimeout:
-                print("Tempo limite de leitura excedido. Tente novamente mais tarde.")
-
-    # Criar DataFrame com os dados dos filmes da API
-    df_new = pd.DataFrame(movies)
-
-    # Cálculo do número de arquivos necessários
-    num_files = math.ceil(len(df_new)/100)
-
-    # Dividir os dados em grupos de 100 registros
-    grouped_data = [df_new[i:i+100] for i in range(0, len(df_new), 100)]
-
-    # Salvar cada grupo em JSON separado em um diretório temporário
-    temp_dir = '/tmp'
-    if not os.path.exists(temp_dir):
-        os.makedirs(temp_dir)
-
-    for i, group in enumerate(grouped_data):
-        filename = f"{temp_dir}/movies_new_{i+1}.json"
-        group.to_json(filename, 'records')
-
-        # Enviar o arquivo para o bucket com o caminho de arquivo adequado
-        current_datetime = datetime.datetime.now()
-        year = str(current_datetime.year)
-        month = str(current_datetime.month).zfill(2)
-        day = str(current_datetime.day).zfill(2)
-        s3_filepath = f"Raw/Movies/JSON/{year}/{month}/{day}/movies_new_{i+1}.json"
-        s3.upload_file(filename, bucket_name, s3_filepath)
-
-    # Remover arquivos temporários
-    for file in os.listdir(temp_dir):
-        file_path = os.path.join(temp_dir, file)
-        os.remove(file_path)
-
-    return {
-        'statusCode': 200,
-        'body': 'Dados processados e enviados para o S3 com sucesso!'
-    }
+def chunk_movies(movies, size):
+    return [movies[i:i+size] for i in range(0, len(movies), size)]
