@@ -5,7 +5,7 @@ from IPython.display import display
 
 
 
-api_key = "7914d785fe26eb4a05011c57d7a7cbdf"
+api_key = "SUAAPIAQUIBELEZA"
 
 url = f"https://api.themoviedb.org/3/movie/top_rated?api_key={api_key}&language=pt-BR"
 
