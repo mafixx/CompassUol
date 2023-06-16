@@ -1,6 +1,8 @@
 ### Tarefa 4:
 
-> Criação do banco de dados com camada refined com o csv em parquet e o json(tmdb) em parquet.
+> Criar processamento que lê os dados existentes na Trusted, processá-los e inseri-los na Refined.
+
+![Camada Refined](img/pastadoparquetrefined.png)
 
 ![Tables criadas](img/tabelasparquetrefinadas.png)
 
