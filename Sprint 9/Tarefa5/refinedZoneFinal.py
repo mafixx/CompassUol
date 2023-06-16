@@ -33,7 +33,7 @@ refined_data = df_csv.select(
 )
 
 # Filtra os dados pela década de 90
-# refined_data = refined_data.filter((col("anoLancamento") >= 1990) & (col("anoLancamento") <= 1999))
+refined_data = refined_data.filter((col("anoLancamento") >= 1990) & (col("anoLancamento") <= 1999))
 
 # Escreve os dados processados na área Refined
 refined_path = "s3://tarefa3/Raw/Local/trustedzone/movies/refined"
