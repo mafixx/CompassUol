@@ -128,7 +128,7 @@
     6. Daily + Tarefa 3 finalizada, respondendo a 4;
     7. Daily + Tarefa 4 finalizada e quase a 5; 
     8. Feriado;
-    9. 
+    9. Daily + Sprint 9 finalizada;
 
 
     
