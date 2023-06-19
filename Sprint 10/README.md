@@ -18,4 +18,4 @@
 
 - [x] Desafio:
 
-**Desenvolver um dashboard a partir dos dados coletados e processados durante as etapas anteriores do desafio proposto no Programa de Bolsas.
+- Desenvolver um dashboard a partir dos dados coletados e processados durante as etapas anteriores do desafio proposto no Programa de Bolsas.
