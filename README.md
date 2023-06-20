@@ -134,6 +134,7 @@
 -> 19/06/2023
 
     1. Review da Sprint 9/Planning 10 - Início da Sprint 10 + Verificando as tarefas do desafio final;
+    2. Daily + Finalizado o curso Introdução completa ao AWS QuickSight; 
 
 
     
