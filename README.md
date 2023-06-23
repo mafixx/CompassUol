@@ -137,6 +137,7 @@
     2. Daily + Finalizado o curso Introdução completa ao AWS QuickSight; 
     3. Iniciando Workshop do Quicksight e testando as ferramentas com os próprios dados;
     4. Daily + Continuidade ao Workshop Quicksight;
+    5. Daily + Revisando o conteúdo do Dashboard;
 
 
     
