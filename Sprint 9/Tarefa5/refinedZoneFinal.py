@@ -25,15 +25,18 @@ df_tmdb = spark.read.format("parquet").load(trusted_path + "tmdb2/")
 
 # Seleciona as colunas necessárias
 refined_data = df_csv.select(
-    col("id"),
-    col("tituloOriginal"),
-    col("anoLancamento"),
-    col("tituloPincipal").alias("tituloPrincipal"),
-    col("notaMedia")
+    col("idFilme"),
+    col("tituloPrincipal"),
+    col("generoFilme"),
+    col("dataLancamento"),
+    col("popularidade"),
+    col("mediaVotos"),
+    col("nomesAtores"),
+    col("nomesAtrizes")
 )
 
 # Filtra os dados pela década de 90
-refined_data = refined_data.filter((col("anoLancamento") >= 1990) & (col("anoLancamento") <= 1999))
+#refined_data = refined_data.filter((col("dataLancamento") >= 1990) & (col("dataLancamento") <= 1999))
 
 # Escreve os dados processados na área Refined
 refined_path = "s3://tarefa3/Raw/Local/trustedzone/movies/refined"
