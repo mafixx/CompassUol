@@ -23,7 +23,7 @@ df.printSchema()
 # Selecionar as colunas separadas para o DataFrame de saída
 processed_data = df.select(
     col("id").alias("id"),
-    col("tituloPincipal").alias("tituloPincipal"),
+    col("tituloPincipal").alias("tituloPrincipal"),
     col("tituloOriginal").alias("tituloOriginal"),
     col("anoLancamento").alias("anoLancamento"),
     col("tempoMinutos").alias("tempoMinutos"),

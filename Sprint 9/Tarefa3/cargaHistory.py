@@ -25,7 +25,7 @@ processed_data = df.select(
     col("id").alias("id"),
     col("original_title").alias("tituloOriginal"),
     col("release_date").alias("anoLancamento"),
-    col("title").alias("tituloPincipal"),
+    col("title").alias("tituloPrincipal"),
     col("vote_average").alias("notaMedia")
 )
 

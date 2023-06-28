@@ -140,8 +140,4 @@
     5. Daily + Revisando o conteúdo do Dashboard;
     6. Daily Geral + Refazendo o Dashboard e criando o storytelling;
     7. Daily com informações da Prova da Aws e finalizando o dashboard;
-
-
-
-
-    
+    8. Daily informando o estado na sprint;
