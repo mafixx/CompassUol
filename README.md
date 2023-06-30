@@ -142,3 +142,4 @@
     7. Daily com informações da Prova da Aws e finalizando o dashboard;
     8. Daily informando o estado na sprint;
     9. Daily + Finalização da Sprint 10;
+    10. Daily + Informando a mentoria a finalização da sprint 10;
