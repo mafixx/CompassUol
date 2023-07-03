@@ -130,7 +130,7 @@
     8. Feriado;
     9. Daily + Sprint 9 finalizada;
 
-### Sprint 9
+### Sprint 10
 -> 19/06/2023
 
     1. Review da Sprint 9/Planning 10 - Início da Sprint 10 + Verificando as tarefas do desafio final;
@@ -143,3 +143,4 @@
     8. Daily informando o estado na sprint;
     9. Daily + Finalização da Sprint 10;
     10. Daily + Informando a mentoria a finalização da sprint 10;
+    11. Review da Sprint 10/Planning formatura;
