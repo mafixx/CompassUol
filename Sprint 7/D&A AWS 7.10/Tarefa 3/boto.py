@@ -3,8 +3,8 @@ import os
 from datetime import datetime
 
 # Definição das variáveis
-aws_access_key_id = "AKIA4JZ2XODUHTXM5D2G"
-aws_secret_access_key = "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"
+aws_access_key_id = ""
+aws_secret_access_key = ""
 bucket_name = "tarefa3"
 raw_zone = "Raw"
 local = "Local"
